@@ -6,7 +6,7 @@
 * @AbandonDate: 2016-11
 * @Editor: Visual Studio Community 2015+
 * @Language: C#
-* @Framework: MonoGame
+* @Framework: Mono | MonoGame
 * @Locale: pl_PL
 * @DocumentationPL: [DOCX](docs/WCFProject_Documentation_PL.docx)
 * @License: GPLv3
