@@ -9,7 +9,7 @@
 * @Framework: Mono | MonoGame
 * @Locale: pl_PL
 * @DocumentationPL: [DOCX](docs/WCFProject_Documentation_PL.docx)
-* @License: GPLv3
+* @License: [GPLv3](LICENSE.md)
 * @Status: Dev | Abandoned | Sample
 
 ## Overview
