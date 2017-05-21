@@ -1,4 +1,4 @@
-# WCFProject
+# WCFProject - Multiplayer Mono**Game**
 
 * @Author: TimsManter
 * @AuthorSite: [TimsManter.NET](http://timsmanter.net/)
