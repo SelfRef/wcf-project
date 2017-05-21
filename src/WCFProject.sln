@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFServer", "WCFHost\WCFServer.csproj", "{02B4896F-9227-403E-8658-68A5C6CD9482}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFReference", "WCFReference\WCFReference.csproj", "{9FFB31C6-D217-4030-B337-4ECA34953227}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFClient", "WPFClient\WPFClient.csproj", "{48D52EBF-B462-4ACF-AEFF-D826870FC8CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Farseer Physics MonoGame", "Farseer Physics Engine 3.5\Farseer Physics MonoGame.csproj", "{0AAD36E3-51A5-4A07-AB60-5C8A66BD38B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameWindow", "GameWindow\GameWindow.csproj", "{F2DD667A-1E1F-42FB-861E-E425D55CFAD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DebugView MonoGame", "Farseer Physics DebugView 3.5\DebugView MonoGame.csproj", "{566F1803-90B5-4947-8730-57F092FBB002}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TiledSharp", "TiledSharp\TiledSharp.csproj", "{E4130F8D-D301-4E0C-916D-489C4A23C9B1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{785397F6-7299-4B28-ACE0-97061442FFB0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02B4896F-9227-403E-8658-68A5C6CD9482}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02B4896F-9227-403E-8658-68A5C6CD9482}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02B4896F-9227-403E-8658-68A5C6CD9482}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02B4896F-9227-403E-8658-68A5C6CD9482}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FFB31C6-D217-4030-B337-4ECA34953227}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FFB31C6-D217-4030-B337-4ECA34953227}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FFB31C6-D217-4030-B337-4ECA34953227}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FFB31C6-D217-4030-B337-4ECA34953227}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48D52EBF-B462-4ACF-AEFF-D826870FC8CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48D52EBF-B462-4ACF-AEFF-D826870FC8CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48D52EBF-B462-4ACF-AEFF-D826870FC8CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48D52EBF-B462-4ACF-AEFF-D826870FC8CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AAD36E3-51A5-4A07-AB60-5C8A66BD38B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AAD36E3-51A5-4A07-AB60-5C8A66BD38B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AAD36E3-51A5-4A07-AB60-5C8A66BD38B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AAD36E3-51A5-4A07-AB60-5C8A66BD38B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2DD667A-1E1F-42FB-861E-E425D55CFAD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2DD667A-1E1F-42FB-861E-E425D55CFAD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2DD667A-1E1F-42FB-861E-E425D55CFAD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2DD667A-1E1F-42FB-861E-E425D55CFAD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{566F1803-90B5-4947-8730-57F092FBB002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{566F1803-90B5-4947-8730-57F092FBB002}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{566F1803-90B5-4947-8730-57F092FBB002}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{566F1803-90B5-4947-8730-57F092FBB002}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4130F8D-D301-4E0C-916D-489C4A23C9B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4130F8D-D301-4E0C-916D-489C4A23C9B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4130F8D-D301-4E0C-916D-489C4A23C9B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4130F8D-D301-4E0C-916D-489C4A23C9B1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0AAD36E3-51A5-4A07-AB60-5C8A66BD38B7} = {785397F6-7299-4B28-ACE0-97061442FFB0}
+		{566F1803-90B5-4947-8730-57F092FBB002} = {785397F6-7299-4B28-ACE0-97061442FFB0}
+		{E4130F8D-D301-4E0C-916D-489C4A23C9B1} = {785397F6-7299-4B28-ACE0-97061442FFB0}
+	EndGlobalSection
+EndGlobal

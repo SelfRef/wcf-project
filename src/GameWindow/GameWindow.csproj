@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F2DD667A-1E1F-42FB-861E-E425D55CFAD6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GameWindow</RootNamespace>
+    <AssemblyName>GameWindow</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>Windows</MonoGamePlatform>
+    <MonoGameContentBuilderExe>
+    </MonoGameContentBuilderExe>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Release\GameWindow.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>GameWindow.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Objects\Camera2D.cs" />
+    <Compile Include="Objects\Container.cs" />
+    <Compile Include="SceneManager.cs" />
+    <Compile Include="GameScenes\MainScene.cs" />
+    <Compile Include="GameScenes\Base\IGameScene.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework, Version=3.4.0.459, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MonoGame.Framework.WindowsDX.3.4.0.459\lib\net40\MonoGame.Framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Doge.txt" />
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\WCFReference\Content\bin\Cars\enemy.xnb">
+      <Link>Content\Cars\enemy.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\WCFReference\Content\bin\Font.xnb">
+      <Link>Content\Font.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\WCFReference\Content\bin\Fonts\Century.xnb">
+      <Link>Content\Fonts\Century.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\WCFReference\Content\bin\Maps\Assets\Futuristic_A1.xnb">
+      <Link>Content\Maps\Assets\Futuristic_A1.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\WCFReference\Content\bin\Maps\Assets\Futuristic_A2.xnb">
+      <Link>Content\Maps\Assets\Futuristic_A2.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\WCFReference\Content\bin\Maps\Assets\Futuristic_A3.xnb">
+      <Link>Content\Maps\Assets\Futuristic_A3.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\WCFReference\Content\bin\Maps\Assets\Futuristic_A4.xnb">
+      <Link>Content\Maps\Assets\Futuristic_A4.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\WCFReference\Content\bin\Maps\Assets\Futuristic_A5.xnb">
+      <Link>Content\Maps\Assets\Futuristic_A5.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\WCFReference\Content\bin\Maps\Assets\Futuristic_TileB.xnb">
+      <Link>Content\Maps\Assets\Futuristic_TileB.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\WCFReference\Content\bin\Maps\Assets\Futuristic_TileC.xnb">
+      <Link>Content\Maps\Assets\Futuristic_TileC.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\WCFReference\Content\bin\Maps\Assets\Futuristic_TileD.xnb">
+      <Link>Content\Maps\Assets\Futuristic_TileD.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\WCFReference\Content\bin\Maps\Assets\Futuristic_TileE.xnb">
+      <Link>Content\Maps\Assets\Futuristic_TileE.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\WCFReference\Content\bin\Materials\blank.xnb">
+      <Link>Content\Materials\blank.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\WCFReference\Content\bin\Materials\dots.xnb">
+      <Link>Content\Materials\dots.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\WCFReference\Content\bin\Materials\pavement.xnb">
+      <Link>Content\Materials\pavement.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\WCFReference\Content\bin\Materials\squares.xnb">
+      <Link>Content\Materials\squares.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\WCFReference\Content\bin\Materials\waves.xnb">
+      <Link>Content\Materials\waves.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\WCFReference\Content\bin\People\man.xnb">
+      <Link>Content\People\man.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Farseer Physics DebugView 3.5\DebugView MonoGame.csproj">
+      <Project>{566f1803-90b5-4947-8730-57f092fbb002}</Project>
+      <Name>DebugView MonoGame</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Farseer Physics Engine 3.5\Farseer Physics MonoGame.csproj">
+      <Project>{0aad36e3-51a5-4a07-ab60-5c8a66bd38b7}</Project>
+      <Name>Farseer Physics MonoGame</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TiledSharp\TiledSharp.csproj">
+      <Project>{e4130f8d-d301-4e0c-916d-489c4a23c9b1}</Project>
+      <Name>TiledSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WCFReference\WCFReference.csproj">
+      <Project>{9ffb31c6-d217-4030-b337-4eca34953227}</Project>
+      <Name>WCFReference</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" /> -->
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="left-up" width="100" height="100" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="Futuristic_A1" tilewidth="16" tileheight="16">
+  <image source="./Assets/Futuristic_A1.png" width="512" height="384"/>
+  <terraintypes>
+   <terrain name="dirty water" tile="98"/>
+   <terrain name="water" tile="290"/>
+   <terrain name="deep water" tile="706"/>
+  </terraintypes>
+  <tile id="0" terrain=",,,0">
+   <animation>
+    <frame tileid="0" duration="500"/>
+    <frame tileid="4" duration="500"/>
+    <frame tileid="8" duration="500"/>
+   </animation>
+  </tile>
+  <tile id="1" terrain=",,0,">
+   <animation>
+    <frame tileid="1" duration="500"/>
+    <frame tileid="5" duration="500"/>
+    <frame tileid="9" duration="500"/>
+   </animation>
+  </tile>
+  <tile id="2" terrain=",0,0,0">
+   <animation>
+    <frame tileid="2" duration="500"/>
+    <frame tileid="6" duration="500"/>
+    <frame tileid="10" duration="500"/>
+   </animation>
+  </tile>
+  <tile id="3" terrain="0,,0,0">
+   <animation>
+    <frame tileid="3" duration="500"/>
+    <frame tileid="7" duration="500"/>
+    <frame tileid="11" duration="500"/>
+   </animation>
+  </tile>
+  <tile id="32" terrain=",0,,">
+   <animation>
+    <frame tileid="32" duration="500"/>
+    <frame tileid="36" duration="500"/>
+    <frame tileid="40" duration="500"/>
+   </animation>
+  </tile>
+  <tile id="33" terrain="0,,,">
+   <animation>
+    <frame tileid="33" duration="500"/>
+    <frame tileid="37" duration="500"/>
+    <frame tileid="41" duration="500"/>
+   </animation>
+  </tile>
+  <tile id="34" terrain="0,0,,0">
+   <animation>
+    <frame tileid="34" duration="500"/>
+    <frame tileid="38" duration="500"/>
+    <frame tileid="42" duration="500"/>
+   </animation>
+  </tile>
+  <tile id="35" terrain="0,0,0,">
+   <animation>
+    <frame tileid="35" duration="500"/>
+    <frame tileid="39" duration="500"/>
+    <frame tileid="43" duration="500"/>
+   </animation>
+  </tile>
+  <tile id="64" terrain=",,,0">
+   <animation>
+    <frame tileid="64" duration="500"/>
+    <frame tileid="68" duration="500"/>
+    <frame tileid="72" duration="500"/>
+   </animation>
+  </tile>
+  <tile id="65" terrain=",,0,0">
+   <animation>
+    <frame tileid="65" duration="500"/>
+    <frame tileid="69" duration="500"/>
+    <frame tileid="73" duration="500"/>
+   </animation>
+  </tile>
+  <tile id="66" terrain=",,0,0">
+   <animation>
+    <frame tileid="66" duration="500"/>
+    <frame tileid="70" duration="500"/>
+    <frame tileid="74" duration="500"/>
+   </animation>
+  </tile>
+  <tile id="67" terrain=",,0,">
+   <animation>
+    <frame tileid="67" duration="500"/>
+    <frame tileid="71" duration="500"/>
+    <frame tileid="75" duration="500"/>
+   </animation>
+  </tile>
+  <tile id="96" terrain=",0,,0">
+   <animation>
+    <frame tileid="96" duration="500"/>
+    <frame tileid="100" duration="500"/>
+    <frame tileid="104" duration="500"/>
+   </animation>
+  </tile>
+  <tile id="97" terrain="0,0,0,0">
+   <animation>
+    <frame tileid="97" duration="500"/>
+    <frame tileid="101" duration="500"/>
+    <frame tileid="105" duration="500"/>
+   </animation>
+  </tile>
+  <tile id="98" terrain="0,0,0,0">
+   <animation>
+    <frame tileid="98" duration="500"/>
+    <frame tileid="102" duration="500"/>
+    <frame tileid="106" duration="500"/>
+   </animation>
+  </tile>
+  <tile id="99" terrain="0,,0,">
+   <animation>
+    <frame tileid="99" duration="500"/>
+    <frame tileid="103" duration="500"/>
+    <frame tileid="107" duration="500"/>
+   </animation>
+  </tile>
+  <tile id="128" terrain=",0,,0">
+   <animation>
+    <frame tileid="128" duration="500"/>
+    <frame tileid="132" duration="500"/>
+    <frame tileid="136" duration="500"/>
+   </animation>
+  </tile>
+  <tile id="129" terrain="0,0,0,0">
+   <animation>
+    <frame tileid="129" duration="500"/>
+    <frame tileid="133" duration="500"/>
+    <frame tileid="137" duration="500"/>
+   </animation>
+  </tile>
+  <tile id="130" terrain="0,0,0,0">
+   <animation>
+    <frame tileid="130" duration="500"/>
+    <frame tileid="134" duration="500"/>
+    <frame tileid="138" duration="500"/>
+   </animation>
+  </tile>
+  <tile id="131" terrain="0,,0,">
+   <animation>
+    <frame tileid="131" duration="500"/>
+    <frame tileid="135" duration="500"/>
+    <frame tileid="139" duration="500"/>
+   </animation>
+  </tile>
+  <tile id="160" terrain=",0,,">
+   <animation>
+    <frame tileid="160" duration="500"/>
+    <frame tileid="164" duration="500"/>
+    <frame tileid="168" duration="500"/>
+   </animation>
+  </tile>
+  <tile id="161" terrain="0,0,,">
+   <animation>
+    <frame tileid="161" duration="500"/>
+    <frame tileid="165" duration="500"/>
+    <frame tileid="169" duration="500"/>
+   </animation>
+  </tile>
+  <tile id="162" terrain="0,0,,">
+   <animation>
+    <frame tileid="162" duration="500"/>
+    <frame tileid="166" duration="500"/>
+    <frame tileid="170" duration="500"/>
+   </animation>
+  </tile>
+  <tile id="163" terrain="0,,,">
+   <animation>
+    <frame tileid="163" duration="500"/>
+    <frame tileid="167" duration="500"/>
+    <frame tileid="171" duration="500"/>
+   </animation>
+  </tile>
+  <tile id="192" terrain=",,,1">
+   <animation>
+    <frame tileid="192" duration="1000"/>
+    <frame tileid="196" duration="1000"/>
+    <frame tileid="200" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="193" terrain=",,1,">
+   <animation>
+    <frame tileid="193" duration="1000"/>
+    <frame tileid="197" duration="1000"/>
+    <frame tileid="201" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="194" terrain=",1,1,1">
+   <animation>
+    <frame tileid="194" duration="1000"/>
+    <frame tileid="198" duration="1000"/>
+    <frame tileid="202" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="195" terrain="1,,1,1">
+   <animation>
+    <frame tileid="195" duration="1000"/>
+    <frame tileid="199" duration="1000"/>
+    <frame tileid="203" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="224" terrain=",1,,">
+   <animation>
+    <frame tileid="224" duration="1000"/>
+    <frame tileid="228" duration="1000"/>
+    <frame tileid="232" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="225" terrain="1,,,">
+   <animation>
+    <frame tileid="225" duration="1000"/>
+    <frame tileid="229" duration="1000"/>
+    <frame tileid="233" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="226" terrain="1,1,,1">
+   <animation>
+    <frame tileid="226" duration="1000"/>
+    <frame tileid="230" duration="1000"/>
+    <frame tileid="234" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="227" terrain="1,1,1,">
+   <animation>
+    <frame tileid="227" duration="1000"/>
+    <frame tileid="231" duration="1000"/>
+    <frame tileid="235" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="256" terrain=",,,1">
+   <animation>
+    <frame tileid="256" duration="1000"/>
+    <frame tileid="260" duration="1000"/>
+    <frame tileid="264" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="257" terrain=",,1,1">
+   <animation>
+    <frame tileid="257" duration="1000"/>
+    <frame tileid="261" duration="1000"/>
+    <frame tileid="265" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="258" terrain=",,1,1">
+   <animation>
+    <frame tileid="258" duration="1000"/>
+    <frame tileid="262" duration="1000"/>
+    <frame tileid="266" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="259" terrain=",,1,">
+   <animation>
+    <frame tileid="259" duration="1000"/>
+    <frame tileid="263" duration="1000"/>
+    <frame tileid="267" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="288" terrain=",1,,1">
+   <animation>
+    <frame tileid="288" duration="1000"/>
+    <frame tileid="292" duration="1000"/>
+    <frame tileid="296" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="289" terrain="1,1,1,1">
+   <animation>
+    <frame tileid="289" duration="1000"/>
+    <frame tileid="293" duration="1000"/>
+    <frame tileid="297" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="290" terrain="1,1,1,1">
+   <animation>
+    <frame tileid="290" duration="1000"/>
+    <frame tileid="294" duration="1000"/>
+    <frame tileid="298" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="291" terrain="1,,1,">
+   <animation>
+    <frame tileid="291" duration="1000"/>
+    <frame tileid="295" duration="1000"/>
+    <frame tileid="299" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="320" terrain=",1,,1">
+   <animation>
+    <frame tileid="320" duration="1000"/>
+    <frame tileid="324" duration="1000"/>
+    <frame tileid="328" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="321" terrain="1,1,1,1">
+   <animation>
+    <frame tileid="321" duration="1000"/>
+    <frame tileid="325" duration="1000"/>
+    <frame tileid="329" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="322" terrain="1,1,1,1">
+   <animation>
+    <frame tileid="322" duration="1000"/>
+    <frame tileid="326" duration="1000"/>
+    <frame tileid="330" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="323" terrain="1,,1,">
+   <animation>
+    <frame tileid="323" duration="1000"/>
+    <frame tileid="327" duration="1000"/>
+    <frame tileid="331" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="352" terrain=",1,,">
+   <animation>
+    <frame tileid="352" duration="1000"/>
+    <frame tileid="356" duration="1000"/>
+    <frame tileid="360" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="353" terrain="1,1,,">
+   <animation>
+    <frame tileid="353" duration="1000"/>
+    <frame tileid="357" duration="1000"/>
+    <frame tileid="361" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="354" terrain="1,1,,">
+   <animation>
+    <frame tileid="354" duration="1000"/>
+    <frame tileid="358" duration="1000"/>
+    <frame tileid="362" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="355" terrain="1,,,">
+   <animation>
+    <frame tileid="355" duration="1000"/>
+    <frame tileid="359" duration="1000"/>
+    <frame tileid="363" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="362">
+   <objectgroup draworder="index"/>
+  </tile>
+  <tile id="480">
+   <animation>
+    <frame tileid="480" duration="1000"/>
+    <frame tileid="484" duration="1000"/>
+    <frame tileid="488" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="481">
+   <animation>
+    <frame tileid="481" duration="1000"/>
+    <frame tileid="485" duration="1000"/>
+    <frame tileid="489" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="512">
+   <animation>
+    <frame tileid="512" duration="1000"/>
+    <frame tileid="516" duration="1000"/>
+    <frame tileid="520" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="513">
+   <animation>
+    <frame tileid="513" duration="1000"/>
+    <frame tileid="517" duration="1000"/>
+    <frame tileid="521" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="544">
+   <animation>
+    <frame tileid="544" duration="1000"/>
+    <frame tileid="548" duration="1000"/>
+    <frame tileid="552" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="545">
+   <animation>
+    <frame tileid="545" duration="1000"/>
+    <frame tileid="549" duration="1000"/>
+    <frame tileid="553" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="576" terrain=",,,2">
+   <animation>
+    <frame tileid="576" duration="1000"/>
+    <frame tileid="580" duration="1000"/>
+    <frame tileid="584" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="577" terrain=",,2,">
+   <animation>
+    <frame tileid="577" duration="1000"/>
+    <frame tileid="581" duration="1000"/>
+    <frame tileid="585" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="578" terrain=",2,2,2">
+   <animation>
+    <frame tileid="578" duration="1000"/>
+    <frame tileid="582" duration="1000"/>
+    <frame tileid="586" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="579" terrain="2,,2,2">
+   <animation>
+    <frame tileid="579" duration="1000"/>
+    <frame tileid="583" duration="1000"/>
+    <frame tileid="587" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="608" terrain=",2,,">
+   <animation>
+    <frame tileid="608" duration="1000"/>
+    <frame tileid="612" duration="1000"/>
+    <frame tileid="616" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="609" terrain="2,,,">
+   <animation>
+    <frame tileid="609" duration="1000"/>
+    <frame tileid="613" duration="1000"/>
+    <frame tileid="617" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="610" terrain="2,2,,2">
+   <animation>
+    <frame tileid="610" duration="1000"/>
+    <frame tileid="614" duration="1000"/>
+    <frame tileid="618" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="611" terrain="2,2,2,">
+   <animation>
+    <frame tileid="611" duration="1000"/>
+    <frame tileid="615" duration="1000"/>
+    <frame tileid="619" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="640" terrain=",,,2">
+   <animation>
+    <frame tileid="640" duration="1000"/>
+    <frame tileid="644" duration="1000"/>
+    <frame tileid="648" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="641" terrain=",,2,2">
+   <animation>
+    <frame tileid="641" duration="1000"/>
+    <frame tileid="645" duration="1000"/>
+    <frame tileid="649" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="642" terrain=",,2,2">
+   <animation>
+    <frame tileid="642" duration="1000"/>
+    <frame tileid="646" duration="1000"/>
+    <frame tileid="650" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="643" terrain=",,2,">
+   <animation>
+    <frame tileid="643" duration="1000"/>
+    <frame tileid="647" duration="1000"/>
+    <frame tileid="651" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="672" terrain=",2,,2">
+   <animation>
+    <frame tileid="672" duration="1000"/>
+    <frame tileid="676" duration="1000"/>
+    <frame tileid="680" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="673" terrain="2,2,2,2">
+   <animation>
+    <frame tileid="673" duration="1000"/>
+    <frame tileid="677" duration="1000"/>
+    <frame tileid="681" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="674" terrain="2,2,2,2">
+   <animation>
+    <frame tileid="674" duration="1000"/>
+    <frame tileid="678" duration="1000"/>
+    <frame tileid="682" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="675" terrain="2,,2,">
+   <animation>
+    <frame tileid="675" duration="1000"/>
+    <frame tileid="679" duration="1000"/>
+    <frame tileid="683" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="704" terrain=",2,,2">
+   <animation>
+    <frame tileid="704" duration="1000"/>
+    <frame tileid="708" duration="1000"/>
+    <frame tileid="712" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="705" terrain="2,2,2,2">
+   <animation>
+    <frame tileid="705" duration="1000"/>
+    <frame tileid="709" duration="1000"/>
+    <frame tileid="713" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="706" terrain="2,2,2,2">
+   <animation>
+    <frame tileid="706" duration="1000"/>
+    <frame tileid="710" duration="1000"/>
+    <frame tileid="714" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="707" terrain="2,,2,">
+   <animation>
+    <frame tileid="707" duration="1000"/>
+    <frame tileid="711" duration="1000"/>
+    <frame tileid="715" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="736" terrain=",2,,">
+   <animation>
+    <frame tileid="736" duration="1000"/>
+    <frame tileid="740" duration="1000"/>
+    <frame tileid="744" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="737" terrain="2,2,,">
+   <animation>
+    <frame tileid="737" duration="1000"/>
+    <frame tileid="741" duration="1000"/>
+    <frame tileid="745" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="738" terrain="2,2,,">
+   <animation>
+    <frame tileid="738" duration="1000"/>
+    <frame tileid="742" duration="1000"/>
+    <frame tileid="746" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="739" terrain="2,,,">
+   <animation>
+    <frame tileid="739" duration="1000"/>
+    <frame tileid="743" duration="1000"/>
+    <frame tileid="747" duration="1000"/>
+   </animation>
+  </tile>
+ </tileset>
+ <tileset firstgid="769" name="Futuristic_A2" tilewidth="16" tileheight="16">
+  <image source="./Assets/Futuristic_A2.png" width="576" height="384"/>
+  <terraintypes>
+   <terrain name="dirt" tile="146"/>
+   <terrain name="brick" tile="150"/>
+   <terrain name="sidewalk" tile="590"/>
+   <terrain name="brick sidewalk" tile="158"/>
+   <terrain name="brick wall" tile="250"/>
+  </terraintypes>
+  <tile id="0" terrain=",,,0"/>
+  <tile id="1" terrain=",,0,"/>
+  <tile id="2" terrain=",0,0,0"/>
+  <tile id="3" terrain="0,,0,0"/>
+  <tile id="4" terrain=",,,1"/>
+  <tile id="5" terrain=",,1,"/>
+  <tile id="6" terrain=",1,1,1"/>
+  <tile id="7" terrain="1,,1,1"/>
+  <tile id="12" terrain=",,,3"/>
+  <tile id="13" terrain=",,3,"/>
+  <tile id="14" terrain=",3,3,3"/>
+  <tile id="15" terrain="3,,3,3"/>
+  <tile id="32" terrain=",,,4"/>
+  <tile id="33" terrain=",,4,"/>
+  <tile id="34" terrain=",4,4,4"/>
+  <tile id="35" terrain="4,,4,4"/>
+  <tile id="36" terrain=",0,,"/>
+  <tile id="37" terrain="0,,,"/>
+  <tile id="38" terrain="0,0,,0"/>
+  <tile id="39" terrain="0,0,0,"/>
+  <tile id="40" terrain=",1,,"/>
+  <tile id="41" terrain="1,,,"/>
+  <tile id="42" terrain="1,1,,1"/>
+  <tile id="43" terrain="1,1,1,"/>
+  <tile id="48" terrain=",3,,"/>
+  <tile id="49" terrain="3,,,"/>
+  <tile id="50" terrain="3,3,,3"/>
+  <tile id="51" terrain="3,3,3,"/>
+  <tile id="68" terrain=",4,,"/>
+  <tile id="69" terrain="4,,,"/>
+  <tile id="70" terrain="4,4,,4"/>
+  <tile id="71" terrain="4,4,4,"/>
+  <tile id="72" terrain=",,,0"/>
+  <tile id="73" terrain=",,0,0"/>
+  <tile id="74" terrain=",,0,0"/>
+  <tile id="75" terrain=",,0,"/>
+  <tile id="76" terrain=",,,1"/>
+  <tile id="77" terrain=",,1,1"/>
+  <tile id="78" terrain=",,1,1"/>
+  <tile id="79" terrain=",,1,"/>
+  <tile id="84" terrain=",,,3"/>
+  <tile id="85" terrain=",,3,3"/>
+  <tile id="86" terrain=",,3,3"/>
+  <tile id="87" terrain=",,3,"/>
+  <tile id="104" terrain=",,,4"/>
+  <tile id="105" terrain=",,4,4"/>
+  <tile id="106" terrain=",,4,4"/>
+  <tile id="107" terrain=",,4,"/>
+  <tile id="108" terrain=",0,,0"/>
+  <tile id="109" terrain="0,0,0,0"/>
+  <tile id="110" terrain="0,0,0,0"/>
+  <tile id="111" terrain="0,,0,"/>
+  <tile id="112" terrain=",1,,1"/>
+  <tile id="113" terrain="1,1,1,1"/>
+  <tile id="114" terrain="1,1,1,1"/>
+  <tile id="115" terrain="1,,1,"/>
+  <tile id="120" terrain=",3,,3"/>
+  <tile id="121" terrain="3,3,3,3"/>
+  <tile id="122" terrain="3,3,3,3"/>
+  <tile id="123" terrain="3,,3,"/>
+  <tile id="140" terrain=",4,,4"/>
+  <tile id="141" terrain="4,4,4,4"/>
+  <tile id="142" terrain="4,4,4,4"/>
+  <tile id="143" terrain="4,,4,"/>
+  <tile id="144" terrain=",0,,0"/>
+  <tile id="145" terrain="0,0,0,0"/>
+  <tile id="146" terrain="0,0,0,0"/>
+  <tile id="147" terrain="0,,0,"/>
+  <tile id="148" terrain=",1,,1"/>
+  <tile id="149" terrain="1,1,1,1"/>
+  <tile id="150" terrain="1,1,1,1"/>
+  <tile id="151" terrain="1,,1,"/>
+  <tile id="156" terrain=",3,,3"/>
+  <tile id="157" terrain="3,3,3,3"/>
+  <tile id="158" terrain="3,3,3,3"/>
+  <tile id="159" terrain="3,,3,"/>
+  <tile id="176" terrain=",4,,4"/>
+  <tile id="177" terrain="4,4,4,4"/>
+  <tile id="178" terrain="4,4,4,4"/>
+  <tile id="179" terrain="4,,4,"/>
+  <tile id="180" terrain=",0,,"/>
+  <tile id="181" terrain="0,0,,"/>
+  <tile id="182" terrain="0,0,,"/>
+  <tile id="183" terrain="0,,,"/>
+  <tile id="184" terrain=",1,,"/>
+  <tile id="185" terrain="1,1,,"/>
+  <tile id="186" terrain="1,1,,"/>
+  <tile id="187" terrain="1,,,"/>
+  <tile id="192" terrain=",3,,"/>
+  <tile id="193" terrain="3,3,,"/>
+  <tile id="194" terrain="3,3,,"/>
+  <tile id="195" terrain="3,,,"/>
+  <tile id="212" terrain=",4,,4"/>
+  <tile id="213" terrain="4,4,4,4"/>
+  <tile id="214" terrain="4,4,4,4"/>
+  <tile id="215" terrain="4,,4,"/>
+  <tile id="248" terrain=",4,,"/>
+  <tile id="249" terrain="4,4,,"/>
+  <tile id="250" terrain="4,4,,"/>
+  <tile id="251" terrain="4,,,"/>
+  <tile id="444" terrain=",,,2"/>
+  <tile id="445" terrain=",,2,"/>
+  <tile id="446" terrain=",2,2,2"/>
+  <tile id="447" terrain="2,,2,2"/>
+  <tile id="480" terrain=",2,,"/>
+  <tile id="481" terrain="2,,,"/>
+  <tile id="482" terrain="2,2,,2"/>
+  <tile id="483" terrain="2,2,2,"/>
+  <tile id="516" terrain=",,,2"/>
+  <tile id="517" terrain=",,2,2"/>
+  <tile id="518" terrain=",,2,2"/>
+  <tile id="519" terrain=",,2,"/>
+  <tile id="552" terrain=",2,,2"/>
+  <tile id="553" terrain="2,2,2,2"/>
+  <tile id="554" terrain="2,2,2,2"/>
+  <tile id="555" terrain="2,,2,"/>
+  <tile id="588" terrain=",2,,2"/>
+  <tile id="589" terrain="2,2,2,2"/>
+  <tile id="590" terrain="2,2,2,2"/>
+  <tile id="591" terrain="2,,2,"/>
+  <tile id="624" terrain=",2,,"/>
+  <tile id="625" terrain="2,2,,"/>
+  <tile id="626" terrain="2,2,,"/>
+  <tile id="627" terrain="2,,,"/>
+ </tileset>
+ <tileset firstgid="1633" name="Futuristic_A3" tilewidth="16" tileheight="16">
+  <image source="./Assets/Futuristic_A3.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="2145" name="Futuristic_A4" tilewidth="16" tileheight="16">
+  <image source="./Assets/Futuristic_A4.png" width="512" height="480"/>
+ </tileset>
+ <tileset firstgid="3105" name="Futuristic_A5" tilewidth="16" tileheight="16">
+  <image source="./Assets/Futuristic_A5.png" width="256" height="512"/>
+ </tileset>
+ <tileset firstgid="3617" name="Futuristic_TileB" tilewidth="16" tileheight="16">
+  <image source="./Assets/Futuristic_TileB.png" width="512" height="512"/>
+ </tileset>
+ <tileset firstgid="4641" name="Futuristic_TileC" tilewidth="16" tileheight="16">
+  <image source="./Assets/Futuristic_TileC.png" width="512" height="512"/>
+ </tileset>
+ <tileset firstgid="5665" name="Futuristic_TileD" tilewidth="16" tileheight="16">
+  <image source="./Assets/Futuristic_TileD.png" width="512" height="512"/>
+ </tileset>
+ <tileset firstgid="6689" name="Futuristic_TileE" tilewidth="16" tileheight="16">
+  <image source="./Assets/Futuristic_TileE.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Background" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   eJzt0zERgAAAAzEE4AIcgH9t4KI/ZOjFQP86j+P+dzHh8+9lxvUfqI+y6z9QH2XXf6A+yq7/QH2UXf+B+ii7/gP1UXb9B+qj7PoP1EfZ9R+oj7LrP1AfZdd/oD7Krv9AfZRd/4H6KLv+A/VRdv0H6qPs+g/UR9n1H6iPsus/UB9l13+gPsqu/0B9lF3/gfoou/4D9VF2/Qfqo+z6D9RH2fUfqI+y6z9QH2XXf6A+yq7/QH2UXf+B+ii7/gP1UXb9B+qj7PoP1EfZ9R+oj7LrP1AfZdd/oD7Krv9AfZRd/4H6KLv+A/VRdv0H6qPs+g/UR9n1H6iPsus/UB9l13+gPsqu/0B9lF3/gfoou/4D9VF2/Qfqo+z6D9RH2fUfqI+yH7RieHE=
+  </data>
+ </layer>
+ <layer name="Ground" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   eJzt3GGKwjAQgFHxrHuydk/S7knUg2wXKgTZ/v8g78GgprFQhmSaWFzut9t2xn7GMsR+HlvPGNuW4Xtjn7Hf+3Ud+uxDn2041/pxvnfb9xGz+LvmryOeRzzOeF7E4+L9+Pmq/erY5/H/4jVZPn4mut66XT5SNvlIma1e1m3ykaJ+tLi/ajFftSzykaJ+tJivWtTzFuvzFvW8xX5Ji3reon60GB8tq/GRYr5qMV+1WH+0GB8t9q9a5KNFPlqsP1p29TxFPlrMVy2eZ2iRjxb7JS3GR4v7qxbPM7TY322Rjxb1o0X9aDE+Wvz+0TLb/1EAAAAAAAAAAAAAAAAAAAAAAAAAAAAwh1/+8H/B
+  </data>
+ </layer>
+ <layer name="Wall" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   eJzt0YEJwkAURMEPVptYi0ktsUKvjIc3A1vA8mZmjtfMufYObyef9fdau8PbybP+fjf7XKZHix4terTo0aJHix4terTo0aJHix4terTo0aJHix4terTo0aJHix4terTo0aJHix4terTo0aJHix4terTo0aJHix4terTo0aJHix4terTo0aJHix4terTo0aJHix4AAAAAAAAAAAAAAAAAAAAAAAAAAAD8mx9HDmWe
+  </data>
+ </layer>
+</map>
