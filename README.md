@@ -35,7 +35,7 @@ Full documentation in Polish language is available [here](docs/WCFProject_Docume
 
 ### Client
 
-| Client 1 | Client 2 |
+Client 1 | Client 2
 :---: | :---:
 ![Client Launcher 1](docs/screenshots/client_launcher.png) | ![Client Launcher 2](docs/screenshots/client_launcher2.png)
 ![Client Window 1](docs/screenshots/client_window.png) | ![Client Window 2](docs/screenshots/client_window2.png)
