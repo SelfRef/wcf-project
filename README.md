@@ -1,5 +1,5 @@
 ---
-code_name: TM-P_WCF-PROJECT_GAM_MON_CSH
+code_name: TM-S_WCF-PROJECT_GAM_MON_CSH
 create_date: 2015-06
 obsolete_date: 2016-11
 author: TM
