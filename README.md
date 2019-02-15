@@ -7,7 +7,7 @@ author_site: timsmanter.net
 editor: Visual Studio Community 2015+
 language: C#
 framework: Mono | MonoGame
-locales: pl_PL
+locale: pl_PL
 documentation:
     - Polish: /docs/WCFProject_Documentation_PL.docx
 license: GPLv3
