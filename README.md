@@ -1,16 +1,20 @@
-# WCFProject - Multiplayer Mono**Game**
+---
+code_name: TM-P_WCF-PROJECT_GAM_MON_CSH
+create_date: 2015-06
+obsolete_date: 2016-11
+author: TM
+author_site: timsmanter.net
+editor: Visual Studio Community 2015+
+language: C#
+framework: Mono | MonoGame
+locales: pl_PL
+documentation:
+    - Polish: /docs/WCFProject_Documentation_PL.docx
+license: GPLv3
+status: [Dev, Sample]
+---
 
-* @Author: TimsManter
-* @AuthorSite: [TimsManter.NET](http://timsmanter.net/)
-* @CreateDate: 2015-06
-* @AbandonDate: 2016-11
-* @Editor: Visual Studio Community 2015+
-* @Language: C#
-* @Framework: Mono | MonoGame
-* @Locale: pl_PL
-* @Documentation: [Polish](docs/WCFProject_Documentation_PL.docx)
-* @License: [GPLv3](LICENSE.md)
-* @Status: Dev | Abandoned | Sample
+# WCFProject - Multiplayer Mono**Game**
 
 ## Overview
 
