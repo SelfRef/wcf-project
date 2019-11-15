@@ -118,6 +118,10 @@
       <Link>Content\Materials\blank.xnb</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="..\WCFReference\Content\bin\Materials\bullet.xnb">
+      <Link>Content\Materials\bullet.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="..\WCFReference\Content\bin\Materials\dots.xnb">
       <Link>Content\Materials\dots.xnb</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

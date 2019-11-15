@@ -65,6 +65,7 @@
     <Compile Include="IClientCallback.cs" />
     <Compile Include="IConnection.cs" />
     <Compile Include="IWCFService.cs" />
+    <Compile Include="Objects\Bullet.cs" />
     <Compile Include="Objects\Car.cs" />
     <Compile Include="Objects\GameObject.cs" />
     <Compile Include="Objects\IPlayable.cs" />

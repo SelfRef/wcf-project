@@ -60,18 +60,22 @@ namespace GameWindow.Objects
     /// </summary>
     public Texture2D CarTX { get; set; }
     /// <summary>
-    /// Font texture.
+    /// Tekstura pocisku
+    /// </summary>
+    public Texture2D BulletTX { get; set; }
+    /// <summary>
+    /// Tekstura fontu
     /// </summary>
     public SpriteFont FontTX { get; set; }
     /// <summary>
-    /// Just dot. Nothing more.
+    /// Tekstura kropki
     /// </summary>
     public Texture2D DotTX { get; set; }
 
 
     private List<string> playersToDelete;
     private List<int> objectsToDelete;
-    private PositionData position;
+    private List<PositionData> position = new List<PositionData>();
 
     /// <summary>
     /// Provides container for better managing game methods.
@@ -107,10 +111,10 @@ namespace GameWindow.Objects
     /// <param name="prevMouse">Previous mouse state.</param>
     public void Update(GameTime gameTime, Camera2D cam, KeyboardState keys, KeyboardState prevKeys, MouseState mouse, MouseState prevMouse)
     {
-      Connection.UpdatePlayers(); // Update Player objects.
-      Connection.UpdateObjects(); // Update all other objects.
-      Players = Connection.Players; // Import reference
-      Objects = Connection.Objects; // ...
+      Connection.UpdatePlayers(); // Aktualizuj dane o graczach z serwera
+      Connection.UpdateObjects(); // Aktualizuj dane o obiektach z serwera
+      Players = Connection.Players;
+      Objects = Connection.Objects;
 
       foreach (var pl in Players) // Creating Player game objects based on imported data.
       {
@@ -130,8 +134,20 @@ namespace GameWindow.Objects
       {
         if (!ObjectsObj.ContainsKey(ob.Key))
         {
-          if (ob.Value.BodyType == ServerObject.BodyTypes.Car) ObjectsObj.Add(ob.Key, new Car(World, CarTX, ob.Value.Position, ob.Value.Angle, Car.Type.Type1, Car.CarColor.Color1, DotTX, null));
-          // TODO: Add other types.
+          GameObject obj;
+          switch (ob.Value.BodyType)
+          {
+            case ServerObject.BodyTypes.Car:
+              obj = new Car(World, CarTX, ob.Value.Position, ob.Value.Angle, Car.Type.Type1, Car.CarColor.Color1, DotTX, null);
+              break;
+            case ServerObject.BodyTypes.Bullet:
+              obj = new Bullet(World, BulletTX, ob.Value.Position, ob.Value.Angle);
+              break;
+            // TODO: Dodać nowe typy obiektów
+            default:
+              throw new KeyNotFoundException("Nieznany typ obiektu!");
+          }
+          ObjectsObj.Add(ob.Key, obj);
         }
         else if (ob.Key != Players[Name].InsideID)
         {
@@ -145,16 +161,29 @@ namespace GameWindow.Objects
       {
         if (keys.IsKeyDown(Keys.Escape)) Manager.ExitGame(); // Exit on escape key.
 
-        Controll controll = new Controll(keys.IsKeyDown(Keys.W), keys.IsKeyDown(Keys.S), keys.IsKeyDown(Keys.A), keys.IsKeyDown(Keys.D), keys.IsKeyDown(Keys.Space), keys.IsKeyDown(Keys.LeftShift)); // Create Controll object contains pressed keys.
+        Controll controll = new Controll(keys.IsKeyDown(Keys.W), keys.IsKeyDown(Keys.S), keys.IsKeyDown(Keys.A), keys.IsKeyDown(Keys.D), keys.IsKeyDown(Keys.Space), keys.IsKeyDown(Keys.LeftShift)); // Obiekt z informacją o aktualne wykonywanych ruchach
         if (!Players[Name].InsideID.HasValue)
         {
+          var PlayerObj = PlayersObj[Name];
           if ((Players[Name].BodyType == ServerPlayer.BodyTypes.Pedestrian) && (prevMouse.Position != mouse.Position)) // Mouse controll.
           {
             if (mouse.LeftButton == ButtonState.Pressed) controll.Front = true;
-            PlayersObj[Name].Angle = (float)Math.Atan2(PlayersObj[Name].Position.Y - (mouse.Y + cam.Position.Y - Manager.GraphicsDevice.Viewport.Height / 2), PlayersObj[Name].Position.X - (mouse.X + cam.Position.X - Manager.GraphicsDevice.Viewport.Width / 2)) - MathHelper.ToRadians(90);
+            PlayerObj.Angle = (float)Math.Atan2(PlayerObj.Position.Y - (mouse.Y + cam.Position.Y - Manager.GraphicsDevice.Viewport.Height / 2), PlayerObj.Position.X - (mouse.X + cam.Position.X - Manager.GraphicsDevice.Viewport.Width / 2)) - MathHelper.ToRadians(90);
           }
-          PlayersObj[Name].UpdateByPlayer(controll);
-          position = new PositionData(PlayersObj[Name].Position, PlayersObj[Name].Angle, PlayersObj[Name].Body.LinearVelocity); // Create position data using to send vector, angle and velocity.
+          PlayerObj.UpdateByPlayer(controll);
+          position.Add(new PositionData(PlayerObj.Position, PlayerObj.Angle, PlayerObj.Body.LinearVelocity)); // Create position data using to send vector, angle and velocity.
+
+          // Obsługa strzelania
+          if (controll.Fire)
+          {
+            var bullet = new Bullet(World, BulletTX, PlayerObj.Position, PlayerObj.Angle);
+            Random rm = new Random();
+            int key = rm.Next();
+            var bulletPos = new PositionData(bullet.Position, bullet.Angle, bullet.Body.LinearVelocity, key);
+            position.Add(bulletPos);
+            ObjectsObj.Add(key, bullet);
+            Connection.CreateBullet(bulletPos);
+          }
         }
         else
         {
@@ -171,7 +200,7 @@ namespace GameWindow.Objects
           PlayersObj[Name].Position = ObjectsObj[Players[Name].InsideID.Value].Position + MathUtils.Mul(new Rot(ObjectsObj[Players[Name].InsideID.Value].Angle), new Vector2(-40, 20)); // Add offset for Player object, when leave car.
           PlayersObj[Name].Angle = ObjectsObj[Players[Name].InsideID.Value].Angle;
 
-          position = new PositionData(ObjectsObj[Players[Name].InsideID.Value].Position, ObjectsObj[Players[Name].InsideID.Value].Angle, ObjectsObj[Players[Name].InsideID.Value].Body.LinearVelocity);
+          position.Add(new PositionData(ObjectsObj[Players[Name].InsideID.Value].Position, ObjectsObj[Players[Name].InsideID.Value].Angle, ObjectsObj[Players[Name].InsideID.Value].Body.LinearVelocity));
         }
 
 
@@ -194,7 +223,7 @@ namespace GameWindow.Objects
         }
       }
 
-      Connection.SendPosition(position); // Important! Sending created data to server.
+      Connection.SendPosition(position); // Wysyłanie pozycji graczy i obiektów do serwera
 
       cam.TrackingBody = Players[Name].InsideID.HasValue ? ObjectsObj[Players[Name].InsideID.Value].Body : PlayersObj[Name].Body; // Set camera on object.
       World.Step((float)gameTime.ElapsedGameTime.TotalMilliseconds * 0.001f); // One small step for iteration but big jump for project.

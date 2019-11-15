@@ -2,31 +2,34 @@
 
 namespace WCFReference
 {
-    [ServiceContract(CallbackContract = typeof(IClientCallback))]
-    public interface IWCFService
-    {
-        [OperationContract]
-        int Login(string name, string pass);
+  [ServiceContract(CallbackContract = typeof(IClientCallback))]
+  public interface IWCFService
+  {
+    [OperationContract]
+    int Login(string name, string pass);
 
-        [OperationContract]
-        void ConsoleWrite(string input);
+    [OperationContract]
+    void ConsoleWrite(string input);
 
-        [OperationContract]
-        void SendPosition(string position);
+    [OperationContract]
+    void SendPosition(string position);
 
-        [OperationContract]
-        void GameOpen(bool action);
+    [OperationContract]
+    void CreateBullet(string position);
 
-        [OperationContract]
-        string GetPlayers();
+    [OperationContract]
+    void GameOpen(bool action);
 
-        [OperationContract]
-        string GetObjects();
+    [OperationContract]
+    string GetPlayers();
 
-        [OperationContract]
-        void SetInside(int targetId);
+    [OperationContract]
+    string GetObjects();
 
-        [OperationContract]
-        void UnsetInside();
-    }
+    [OperationContract]
+    void SetInside(int targetId);
+
+    [OperationContract]
+    void UnsetInside();
+  }
 }

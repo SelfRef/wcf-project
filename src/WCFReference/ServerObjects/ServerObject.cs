@@ -9,7 +9,8 @@ namespace WCFReference.ServerObjects
     {
         public enum BodyTypes
         {
-            Car
+            Car,
+            Bullet,
         }
         public virtual BodyTypes? BodyType { get; set; }
 
@@ -24,7 +25,7 @@ namespace WCFReference.ServerObjects
 
         public bool Active { get; set; }
 
-        public Vector2 VelocitySnap { get; set; }
+        public Vector2? VelocitySnap { get; set; }
 
         public ServerObject(GameObject gameObject, Vector2 position, float angle, bool active, BodyTypes? bodyType = null, int? id = null)
         {
