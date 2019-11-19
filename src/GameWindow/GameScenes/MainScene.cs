@@ -78,6 +78,7 @@ namespace GameWindow.GameScenes
       cont.HumanTS = new TileSet(manag.Content.Load<Texture2D>("People/man"), 4, 1, new Vector2(42, 98));
       cont.CarTX = manag.Content.Load<Texture2D>("Cars/enemy");
       cont.BulletTX = manag.Content.Load<Texture2D>("Materials/bullet");
+      cont.LifeSymTX = manag.Content.Load<Texture2D>("Materials/heart");
       cont.FontTX = manag.Content.Load<SpriteFont>("Fonts/Century");
       cont.DotTX = Map.GetDot(manag.GraphicsDevice);
 
