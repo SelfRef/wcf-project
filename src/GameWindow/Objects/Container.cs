@@ -79,7 +79,6 @@ namespace GameWindow.Objects
 
     private List<string> playersToDelete;
     private List<int> objectsToDelete;
-    private List<PositionData> position = new List<PositionData>();
 
     /// <summary>
     /// Provides container for better managing game methods.
@@ -119,6 +118,7 @@ namespace GameWindow.Objects
       Connection.UpdateObjects(); // Update all other objects.
       Players = Connection.Players;
       Objects = Connection.Objects;
+      List<PositionData> position = new List<PositionData>();
 
       foreach (var pl in Players) // Creating Player game objects based on imported data.
       {

@@ -61,7 +61,7 @@
     <Reference Include="System.Xml.Serialization" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controll.cs" />
+    <Compile Include="Control.cs" />
     <Compile Include="IClientCallback.cs" />
     <Compile Include="IConnection.cs" />
     <Compile Include="IWCFService.cs" />

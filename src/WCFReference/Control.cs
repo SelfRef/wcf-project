@@ -97,7 +97,7 @@ namespace WCFReference
 
       Brake = brake;
       Boost = boost;
-      Fire = brake; // Strzelanie pod tym samym klawiszem, co hamulec
+      Fire = brake; // Same key as for brake
     }
   }
 }
