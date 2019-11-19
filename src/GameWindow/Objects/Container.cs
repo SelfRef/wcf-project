@@ -79,6 +79,7 @@ namespace GameWindow.Objects
 
     private List<string> playersToDelete;
     private List<int> objectsToDelete;
+    Stopwatch bulletStopwatch = new Stopwatch();
 
     /// <summary>
     /// Provides container for better managing game methods.
@@ -180,13 +181,18 @@ namespace GameWindow.Objects
           // Shooting control
           if (control.Fire)
           {
-            var bullet = new Bullet(World, BulletTX, PlayerObj.Position, PlayerObj.Angle);
-            Random rm = new Random();
-            int key = rm.Next();
-            var bulletPos = new PositionData(bullet.Position, bullet.Angle, bullet.Body.LinearVelocity, key);
-            position.Add(bulletPos);
-            ObjectsObj.Add(key, bullet);
-            Connection.CreateBullet(bulletPos);
+            if (!bulletStopwatch.IsRunning || bulletStopwatch.ElapsedMilliseconds > 500)
+            {
+              var bullet = new Bullet(World, BulletTX, PlayerObj.Position, PlayerObj.Angle);
+              Random rm = new Random();
+              int key = rm.Next();
+              Debug.WriteLine("Random: " + key);
+              var bulletPos = new PositionData(bullet.Position, bullet.Angle, bullet.Body.LinearVelocity, key);
+              position.Add(bulletPos);
+              ObjectsObj.Add(key, bullet);
+              Connection.CreateBullet(bulletPos);
+              bulletStopwatch.Restart();
+            }
           }
         }
         else
