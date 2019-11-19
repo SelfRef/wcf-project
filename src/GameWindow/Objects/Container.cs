@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using FarseerPhysics.Common;
 using FarseerPhysics.Dynamics;
@@ -164,20 +165,20 @@ namespace GameWindow.Objects
       {
         if (keys.IsKeyDown(Keys.Escape)) Manager.ExitGame(); // Exit on escape key.
 
-        Control controll = new Control(keys.IsKeyDown(Keys.W), keys.IsKeyDown(Keys.S), keys.IsKeyDown(Keys.A), keys.IsKeyDown(Keys.D), keys.IsKeyDown(Keys.Space), keys.IsKeyDown(Keys.LeftShift)); // Current moves (keys)
+        Control control = new Control(keys.IsKeyDown(Keys.W), keys.IsKeyDown(Keys.S), keys.IsKeyDown(Keys.A), keys.IsKeyDown(Keys.D), keys.IsKeyDown(Keys.Space), keys.IsKeyDown(Keys.LeftShift)); // Current moves (keys)
         if (!Players[Name].InsideID.HasValue)
         {
           var PlayerObj = PlayersObj[Name];
           if ((Players[Name].BodyType == ServerPlayer.BodyTypes.Pedestrian) && (prevMouse.Position != mouse.Position)) // Mouse controll.
           {
-            if (mouse.LeftButton == ButtonState.Pressed) controll.Front = true;
+            if (mouse.LeftButton == ButtonState.Pressed) control.Front = true;
             PlayerObj.Angle = (float)Math.Atan2(PlayerObj.Position.Y - (mouse.Y + cam.Position.Y - Manager.GraphicsDevice.Viewport.Height / 2), PlayerObj.Position.X - (mouse.X + cam.Position.X - Manager.GraphicsDevice.Viewport.Width / 2)) - MathHelper.ToRadians(90);
           }
-          PlayerObj.UpdateByPlayer(controll);
+          PlayerObj.UpdateByPlayer(control);
           position.Add(new PositionData(PlayerObj.Position, PlayerObj.Angle, PlayerObj.Body.LinearVelocity)); // Create position data using to send vector, angle and velocity.
 
           // Shooting control
-          if (controll.Fire)
+          if (control.Fire)
           {
             var bullet = new Bullet(World, BulletTX, PlayerObj.Position, PlayerObj.Angle);
             Random rm = new Random();
@@ -199,7 +200,7 @@ namespace GameWindow.Objects
           //    (ObjectsObj[Players[Name].InsideID.Value] as Car).Wheels[0].Angle = curve;
           //    (ObjectsObj[Players[Name].InsideID.Value] as Car).Wheels[1].Angle = curve;
           //}
-          ObjectsObj[Players[Name].InsideID.Value].UpdateByPlayer(controll);
+          ObjectsObj[Players[Name].InsideID.Value].UpdateByPlayer(control);
           PlayersObj[Name].Position = ObjectsObj[Players[Name].InsideID.Value].Position + MathUtils.Mul(new Rot(ObjectsObj[Players[Name].InsideID.Value].Angle), new Vector2(-40, 20)); // Add offset for Player object, when leave car.
           PlayersObj[Name].Angle = ObjectsObj[Players[Name].InsideID.Value].Angle;
 
@@ -226,7 +227,7 @@ namespace GameWindow.Objects
         }
       }
 
-      Connection.SendPosition(position); // Wysyłanie pozycji graczy i obiektów do serwera
+      Connection.SendPosition(position); // Sending created data to server.
 
       cam.TrackingBody = Players[Name].InsideID.HasValue ? ObjectsObj[Players[Name].InsideID.Value].Body : PlayersObj[Name].Body; // Set camera on object.
       World.Step((float)gameTime.ElapsedGameTime.TotalMilliseconds * 0.001f); // One small step for iteration but big jump for project.
