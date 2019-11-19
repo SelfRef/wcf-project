@@ -16,7 +16,8 @@ namespace WCFReference.Objects
     public Bullet(World world, Texture2D tex, Vector2 position, float angle) : base(world, null, tex, null, position, angle)
     {
       TexRect = new Rectangle((int)position.X, (int)position.Y, 10, 10);
-      Body = BodyFactory.CreateRectangle(world, ConvertUnits.ToSimUnits(10), ConvertUnits.ToSimUnits(10), 1, position);
+      Body = BodyFactory.CreateRectangle(world, ConvertUnits.ToSimUnits(10), ConvertUnits.ToSimUnits(10), 1);
+      Body.BodyType = BodyType.Dynamic;
       Body.Rotation = angle;
     }
 
