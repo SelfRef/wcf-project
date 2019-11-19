@@ -98,7 +98,7 @@ namespace WCFReference.Objects
       //Body.AngularDamping = 10;
     }
 
-    public override void UpdateByPlayer(Controll ctrl)
+    public override void UpdateByPlayer(Control ctrl)
     {
       if (ctrl.Front)
       {

@@ -2,7 +2,7 @@
 
 namespace WCFReference
 {
-  public class Controll
+  public class Control
   {
     public enum Direction
     {
@@ -29,7 +29,7 @@ namespace WCFReference
         return (Front || Back || Left || Right);
       }
     }
-    public Controll(Direction? dir, Side? side, bool? brake, bool? boost)
+    public Control(Direction? dir, Side? side, bool? brake, bool? boost)
     {
       if (dir == Direction.Front)
       {
@@ -49,7 +49,7 @@ namespace WCFReference
       }
     }
 
-    public Controll(bool dir, bool side, bool? brake, bool? boost)
+    public Control(bool dir, bool side, bool? brake, bool? boost)
     {
       Front = dir;
       Back = !dir;
@@ -61,7 +61,7 @@ namespace WCFReference
     }
 
     [JsonConstructor]
-    public Controll(bool front, bool back, bool left, bool right, bool brake = false, bool boost = false)
+    public Control(bool front, bool back, bool left, bool right, bool brake = false, bool boost = false)
     {
       if (front && !back)
       {

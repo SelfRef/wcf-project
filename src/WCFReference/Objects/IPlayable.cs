@@ -11,7 +11,7 @@ namespace WCFReference.Objects
         float Speed { get; set; }
         Body Body { get; set; }
         Vector2 Position { get; set; }
-        void UpdateByPlayer(Controll ctrl);
+        void UpdateByPlayer(Control ctrl);
         bool Enabled { get; set; }
         float Angle { get; set; }
     }

@@ -56,22 +56,25 @@ namespace GameWindow.Objects
     /// </summary>
     public TileSet HumanTS { get; set; }
     /// <summary>
-    /// Texture of cars.
+    /// Texture of car.
     /// </summary>
     public Texture2D CarTX { get; set; }
     /// <summary>
-    /// Tekstura pocisku
+    /// Texture of bullet.
     /// </summary>
     public Texture2D BulletTX { get; set; }
     /// <summary>
-    /// Tekstura fontu
+    /// Texture of life symbol.
+    /// </summary>
+    public Texture2D LifeSymTX { get; set; }
+    /// <summary>
+    /// Font texture.
     /// </summary>
     public SpriteFont FontTX { get; set; }
     /// <summary>
-    /// Tekstura kropki
+    /// Dot for placeholder texture.
     /// </summary>
     public Texture2D DotTX { get; set; }
-
 
     private List<string> playersToDelete;
     private List<int> objectsToDelete;
@@ -111,8 +114,8 @@ namespace GameWindow.Objects
     /// <param name="prevMouse">Previous mouse state.</param>
     public void Update(GameTime gameTime, Camera2D cam, KeyboardState keys, KeyboardState prevKeys, MouseState mouse, MouseState prevMouse)
     {
-      Connection.UpdatePlayers(); // Aktualizuj dane o graczach z serwera
-      Connection.UpdateObjects(); // Aktualizuj dane o obiektach z serwera
+      Connection.UpdatePlayers(); // Update Player objects.
+      Connection.UpdateObjects(); // Update all other objects.
       Players = Connection.Players;
       Objects = Connection.Objects;
 
@@ -161,7 +164,7 @@ namespace GameWindow.Objects
       {
         if (keys.IsKeyDown(Keys.Escape)) Manager.ExitGame(); // Exit on escape key.
 
-        Controll controll = new Controll(keys.IsKeyDown(Keys.W), keys.IsKeyDown(Keys.S), keys.IsKeyDown(Keys.A), keys.IsKeyDown(Keys.D), keys.IsKeyDown(Keys.Space), keys.IsKeyDown(Keys.LeftShift)); // Obiekt z informacją o aktualne wykonywanych ruchach
+        Control controll = new Control(keys.IsKeyDown(Keys.W), keys.IsKeyDown(Keys.S), keys.IsKeyDown(Keys.A), keys.IsKeyDown(Keys.D), keys.IsKeyDown(Keys.Space), keys.IsKeyDown(Keys.LeftShift)); // Current moves (keys)
         if (!Players[Name].InsideID.HasValue)
         {
           var PlayerObj = PlayersObj[Name];
@@ -173,7 +176,7 @@ namespace GameWindow.Objects
           PlayerObj.UpdateByPlayer(controll);
           position.Add(new PositionData(PlayerObj.Position, PlayerObj.Angle, PlayerObj.Body.LinearVelocity)); // Create position data using to send vector, angle and velocity.
 
-          // Obsługa strzelania
+          // Shooting control
           if (controll.Fire)
           {
             var bullet = new Bullet(World, BulletTX, PlayerObj.Position, PlayerObj.Angle);

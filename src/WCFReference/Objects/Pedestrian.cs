@@ -28,13 +28,13 @@ namespace WCFReference.Objects
             };
         }
 
-        public override void UpdateByPlayer(Controll ctrl)
+        public override void UpdateByPlayer(Control ctrl)
         {
             Body.ApplyForce(MathUtils.Mul(new Rot(Angle), new Vector2(0, (ctrl.Front ? -0.5f : 0) + (ctrl.Back ? 0.2f : 0))));
             Body.ApplyTorque((ctrl.Left ? -0.02f : 0) + (ctrl.Right ? 0.02f : 0));
         }
 
-        public void Update(Controll ctrl, float angle)
+        public void Update(Control ctrl, float angle)
         {
             Angle = angle;
         }

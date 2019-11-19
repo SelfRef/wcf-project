@@ -91,7 +91,7 @@ namespace WCFReference.Objects
       }
     }
 
-    public virtual void UpdateByPlayer(Controll ctrl)
+    public virtual void UpdateByPlayer(Control ctrl)
     {
       Body.ApplyForce(new Vector2((ctrl.Back ? 1 : 0) + (ctrl.Front ? -1 : 0), (ctrl.Right ? 1 : 0) + (ctrl.Left ? -1 : 0)));
     }
