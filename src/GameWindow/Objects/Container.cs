@@ -94,6 +94,10 @@ namespace GameWindow.Objects
       Players = con.Players;
       Objects = con.Objects;
       World = new World(Vector2.Zero);
+      World.ContactManager.ContactFilter = (Fixture fxA, Fixture fxB) =>
+      {
+        return !(fxA.CollisionCategories == Category.Cat2 && fxB.CollisionCategories == Category.Cat2);
+      };
       Map = new Map();
       PlayersObj = new Dictionary<string, GameObject>();
       ObjectsObj = new Dictionary<int, GameObject>();
@@ -183,7 +187,8 @@ namespace GameWindow.Objects
           {
             if (!bulletStopwatch.IsRunning || bulletStopwatch.ElapsedMilliseconds > 500)
             {
-              var bullet = new Bullet(World, BulletTX, PlayerObj.Position, PlayerObj.Angle);
+              var pos = PlayerObj.Position + MathUtils.Mul(new Rot(PlayerObj.Angle), new Vector2(5, -20));
+              var bullet = new Bullet(World, BulletTX, pos, PlayerObj.Angle);
               Random rm = new Random();
               int key = rm.Next();
               Debug.WriteLine("Random: " + key);

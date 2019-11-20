@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FarseerPhysics;
+using FarseerPhysics.Common;
 using FarseerPhysics.Dynamics;
 using FarseerPhysics.Factories;
 using Microsoft.Xna.Framework;
@@ -22,12 +23,14 @@ namespace WCFReference.Objects
       Body = BodyFactory.CreateRectangle(world, bodyWidth, bodyHeight, 1, bodyPosition);
       Origin = new Vector2(5, 5);
       Body.BodyType = BodyType.Dynamic;
+      Body.CollisionCategories = Category.Cat2;
       Body.IsBullet = true;
       Body.Mass = 0.005f;
       Body.Restitution = 0.5f;
       Body.LinearDamping = 1;
       Body.AngularDamping = 2;
       Body.Rotation = angle;
+      Body.LinearVelocity = MathUtils.Mul(new Rot(angle), new Vector2(0, -10));
     }
   }
 }

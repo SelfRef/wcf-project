@@ -20,6 +20,7 @@ namespace WCFReference.Objects
     }
     public World World { get; set; }
     public Body Body { get; set; }
+    public Vector2 Origin { get; set; }
     public Texture2D Texture { get; set; }
     public Rectangle _TexRect;
     public Rectangle TexRect
@@ -32,20 +33,6 @@ namespace WCFReference.Objects
       {
         _TexRect = value;
         Origin = new Vector2(TexRect.Width / 2, TexRect.Height / 2);
-      }
-    }
-    private Vector2 _origin;
-    public Vector2 Origin
-    {
-      get
-      {
-        return _origin;
-        //return ConvertUnits.ToDisplayUnits(Body.LocalCenter);
-      }
-      set
-      {
-        _origin = value;
-        //Body.LocalCenter = ConvertUnits.ToSimUnits(value);
       }
     }
     public Vector2 Position
