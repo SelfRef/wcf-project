@@ -197,7 +197,7 @@ namespace GameWindow.Objects
         }
         else
         {
-          // TODO: Support for mouse control while in car. Not done yet!!!
+          // TODO: Support for mouse control while in car.
           //if ((Objects[Players[Name].InsideID.Value].BodyType == ServerObject.BodyTypes.Car) && (prevMouse.Position != mouse.Position))
           //{
           //    if (mouse.LeftButton == ButtonState.Pressed) controll.Front = true;
@@ -245,7 +245,7 @@ namespace GameWindow.Objects
     /// <param name="spriteBatch">Drawing object.</param>
     public void Draw(SpriteBatch spriteBatch)
     {
-      Debug.WriteLine($"Players: {PlayersObj.Count}, Objects: {ObjectsObj.Count}");
+      //Debug.WriteLine($"Players: {PlayersObj.Count}, Objects: {ObjectsObj.Count}");
       foreach (var ob in ObjectsObj.Where(i => i.Value.Enabled)) ob.Value.Draw(spriteBatch); // Draw enabled objects.
       foreach (var pl in PlayersObj.Where(i => i.Value.Enabled && Players[i.Key].Active)) pl.Value.Draw(spriteBatch, Players[pl.Key]?.VelocitySnap); // Draw enabled Players.
     }

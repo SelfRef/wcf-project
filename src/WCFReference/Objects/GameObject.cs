@@ -53,7 +53,7 @@ namespace WCFReference.Objects
       }
       set
       {
-        Body.Position = ConvertUnits.ToSimUnits(value - MathUtils.Mul(new Rot(Angle), Origin));
+        Body.Position = ConvertUnits.ToSimUnits(value);
       }
     }
     public float Angle
@@ -107,7 +107,7 @@ namespace WCFReference.Objects
 
     public virtual void Draw(SpriteBatch spriteBatch, Vector2? velSnap = null)
     {
-      spriteBatch.Draw(Texture, Position, TexRect, Color.Black);
+      spriteBatch.Draw(Texture, Position, origin: Origin, rotation: Angle);
     }
   }
 }
