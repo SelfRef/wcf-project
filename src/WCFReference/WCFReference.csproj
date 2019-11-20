@@ -96,6 +96,10 @@
       <Project>{e4130f8d-d301-4e0c-916d-489c4a23c9b1}</Project>
       <Name>TiledSharp</Name>
     </ProjectReference>
+    <ProjectReference Include="..\VelcroPhysics\VelcroPhysics.MonoGame.csproj">
+      <Project>{bd24f038-a3db-45e5-95eb-93d7c8c9264d}</Project>
+      <Name>VelcroPhysics.MonoGame</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

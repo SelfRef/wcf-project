@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26430.6
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29509.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFServer", "WCFHost\WCFServer.csproj", "{02B4896F-9227-403E-8658-68A5C6CD9482}"
 EndProject
@@ -18,6 +18,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TiledSharp", "TiledSharp\TiledSharp.csproj", "{E4130F8D-D301-4E0C-916D-489C4A23C9B1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{785397F6-7299-4B28-ACE0-97061442FFB0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VelcroPhysics.MonoGame", "VelcroPhysics\VelcroPhysics.MonoGame.csproj", "{BD24F038-A3DB-45E5-95EB-93D7C8C9264D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,10 @@ Global
 		{E4130F8D-D301-4E0C-916D-489C4A23C9B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4130F8D-D301-4E0C-916D-489C4A23C9B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4130F8D-D301-4E0C-916D-489C4A23C9B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD24F038-A3DB-45E5-95EB-93D7C8C9264D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD24F038-A3DB-45E5-95EB-93D7C8C9264D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD24F038-A3DB-45E5-95EB-93D7C8C9264D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD24F038-A3DB-45E5-95EB-93D7C8C9264D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,5 +67,9 @@ Global
 		{0AAD36E3-51A5-4A07-AB60-5C8A66BD38B7} = {785397F6-7299-4B28-ACE0-97061442FFB0}
 		{566F1803-90B5-4947-8730-57F092FBB002} = {785397F6-7299-4B28-ACE0-97061442FFB0}
 		{E4130F8D-D301-4E0C-916D-489C4A23C9B1} = {785397F6-7299-4B28-ACE0-97061442FFB0}
+		{BD24F038-A3DB-45E5-95EB-93D7C8C9264D} = {785397F6-7299-4B28-ACE0-97061442FFB0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {737E895E-8B4F-4690-AF2B-D8435C1A4F9C}
 	EndGlobalSection
 EndGlobal

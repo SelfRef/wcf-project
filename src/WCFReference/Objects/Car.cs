@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using FarseerPhysics;
-using FarseerPhysics.Common;
-using FarseerPhysics.Common.Decomposition;
-using FarseerPhysics.Dynamics;
-using FarseerPhysics.Factories;
+using VelcroPhysics.Shared;
+using VelcroPhysics.Utilities;
+using VelcroPhysics.Tools.Triangulation.TriangulationBase;
+using VelcroPhysics.Dynamics;
+using VelcroPhysics.Factories;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using WCFReference.ServerObjects;
@@ -71,10 +71,11 @@ namespace WCFReference.Objects
 
         uint[] texData = new uint[(int)Size.X * (int)Size.Y];
         Texture.GetData(0, TexRect, texData, 0, texData.Length);
-        Vertices vert = PolygonTools.CreatePolygon(texData, 49);
+        Vertices vert = PolygonUtils.CreatePolygon(texData, 49);
         vert.Scale(ConvertUnits.ToSimUnits(new Vector2(0.96f)));
         List<Vertices> vertList = Triangulate.ConvexPartition(vert, TriangulationAlgorithm.Bayazit);
 
+        Body = BodyFactory.CreateBody(World);
         FixtureFactory.AttachCompoundPolygon(vertList, 1, Body);
       }
 

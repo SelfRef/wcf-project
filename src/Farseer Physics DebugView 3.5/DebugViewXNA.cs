@@ -3,18 +3,23 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
-using FarseerPhysics.Collision;
-using FarseerPhysics.Collision.Shapes;
-using FarseerPhysics.Common;
-using FarseerPhysics.Controllers;
-using FarseerPhysics.Dynamics;
-using FarseerPhysics.Dynamics.Contacts;
-using FarseerPhysics.Dynamics.Joints;
+using VelcroPhysics.Extensions.DebugView;
+using VelcroPhysics.Collision.Narrowphase;
+using VelcroPhysics.Collision.Shapes;
+using VelcroPhysics.Dynamics;
+using VelcroPhysics.Dynamics.Joints;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using VelcroPhysics.Shared;
+using VelcroPhysics.Collision.ContactSystem;
+using VelcroPhysics.Shared.Optimization;
+using VelcroPhysics.Utilities;
+using VelcroPhysics.Collision.Broadphase;
+using VelcroPhysics.Extensions.Controllers.ControllerBase;
+using VelcroPhysics.Extensions.Controllers.Buoyancy;
 
-namespace FarseerPhysics.DebugView
+namespace VelcroPhysics.DebugView
 {
     /// <summary>
     /// A debug view shows you what happens inside the physics engine. You can view
@@ -101,7 +106,7 @@ namespace FarseerPhysics.DebugView
                 Fixture fixtureA = contact.FixtureA;
 
                 FixedArray2<PointState> state1, state2;
-                Collision.Collision.GetPointStates(out state1, out state2, ref oldManifold, ref manifold);
+                Collision.Narrowphase.Collision.GetPointStates(out state1, out state2, ref oldManifold, ref manifold);
 
                 FixedArray2<Vector2> points;
                 Vector2 normal;
@@ -789,9 +794,9 @@ namespace FarseerPhysics.DebugView
             _localView = Matrix.Identity;
         }
 
-        #region Nested type: ContactPoint
+    #region Nested type: ContactPoint
 
-        private struct ContactPoint
+    private struct ContactPoint
         {
             public Vector2 Normal;
             public Vector2 Position;

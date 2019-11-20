@@ -1,6 +1,5 @@
-﻿using FarseerPhysics;
-using FarseerPhysics.Common;
-using FarseerPhysics.Dynamics;
+﻿using VelcroPhysics.Utilities;
+using VelcroPhysics.Dynamics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -11,8 +10,9 @@ namespace WCFReference.Objects
     public GameObject(World world, Body body = null, Texture2D tex = null, Rectangle? rect = null, Vector2? position = null, float? angle = null)
     {
       World = world;
-      Body = body ?? new Body(world);
-      Body.BodyType = BodyType.Dynamic;
+      Body = body;
+      if (Body != null)
+        Body.BodyType = BodyType.Dynamic;
       Texture = tex;
       Position = position ?? Vector2.Zero;
       if (rect.HasValue) TexRect = rect.Value;
@@ -42,7 +42,8 @@ namespace WCFReference.Objects
       }
       set
       {
-        Body.LocalCenter = ConvertUnits.ToSimUnits(value);
+        if (Body != null)
+          Body.LocalCenter = ConvertUnits.ToSimUnits(value);
       }
     }
     public Vector2 Position
@@ -53,7 +54,8 @@ namespace WCFReference.Objects
       }
       set
       {
-        Body.Position = ConvertUnits.ToSimUnits(value);
+        if (Body != null)
+          Body.Position = ConvertUnits.ToSimUnits(value);
       }
     }
     public float Angle
@@ -64,7 +66,8 @@ namespace WCFReference.Objects
       }
       set
       {
-        Body.Rotation = value;
+        if (Body != null)
+          Body.Rotation = value;
       }
     }
     public Vector2 Size

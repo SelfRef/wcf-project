@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Timers;
-using FarseerPhysics;
-using FarseerPhysics.Common;
-using FarseerPhysics.Dynamics;
-using FarseerPhysics.Factories;
+using VelcroPhysics.Shared;
+using VelcroPhysics.Utilities;
+using VelcroPhysics.Dynamics;
+using VelcroPhysics.Factories;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 

@@ -1,5 +1,4 @@
-﻿using FarseerPhysics;
-using FarseerPhysics.DebugView;
+﻿using VelcroPhysics.DebugView;
 using WCFReference.GameScenes.Base;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -7,6 +6,7 @@ using Microsoft.Xna.Framework.Input;
 using WCFReference;
 using WCFReference.Objects;
 using GameWindow.Objects;
+using VelcroPhysics.Extensions.DebugView;
 
 namespace GameWindow.GameScenes
 {

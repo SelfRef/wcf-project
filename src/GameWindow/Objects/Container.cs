@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using FarseerPhysics.Common;
-using FarseerPhysics.Dynamics;
+using VelcroPhysics.Utilities;
+using VelcroPhysics.Shared;
+using VelcroPhysics.Dynamics;
 using GameWindow.GameScenes;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
