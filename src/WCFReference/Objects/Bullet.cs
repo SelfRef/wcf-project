@@ -16,25 +16,15 @@ namespace WCFReference.Objects
   {
     public Bullet(World world, Texture2D tex, Vector2 position, float angle) : base(world, null, tex, null, position, angle)
     {
-      TexRect = new Rectangle((int)position.X, (int)position.Y, 10, 10);
+      var bodyWidth = ConvertUnits.ToSimUnits(5);
       var bodyHeight = ConvertUnits.ToSimUnits(10);
-      var bodyWidth = ConvertUnits.ToSimUnits(10);
       var bodyPosition = ConvertUnits.ToSimUnits(position);
       Body = BodyFactory.CreateRectangle(world, bodyWidth, bodyHeight, 1, bodyPosition);
+      Origin = new Vector2(5, 5);
       Body.BodyType = BodyType.Dynamic;
-      //Body.IsBullet = true;
-      Body.Mass = 0.0010f;
+      Body.IsBullet = true;
+      Body.Mass = 0.005f;
       Body.Rotation = angle;
-      Debug.WriteLine("Bullet created");
-
-      Body.LinearVelocity = new Vector2(5);
-    }
-
-    public override void Draw(SpriteBatch spriteBatch, Vector2? velSnap = null)
-    {
-      base.Draw(spriteBatch, velSnap);
-      Debug.WriteLine($"Position: {Body.Position}");
-      Debug.WriteLine($"World Position: {Body.WorldCenter}");
     }
   }
 }

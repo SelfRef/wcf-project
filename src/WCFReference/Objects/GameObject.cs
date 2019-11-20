@@ -34,15 +34,18 @@ namespace WCFReference.Objects
         Origin = new Vector2(TexRect.Width / 2, TexRect.Height / 2);
       }
     }
+    private Vector2 _origin;
     public Vector2 Origin
     {
       get
       {
-        return ConvertUnits.ToDisplayUnits(Body.LocalCenter);
+        return _origin;
+        //return ConvertUnits.ToDisplayUnits(Body.LocalCenter);
       }
       set
       {
-        Body.LocalCenter = ConvertUnits.ToSimUnits(value);
+        _origin = value;
+        //Body.LocalCenter = ConvertUnits.ToSimUnits(value);
       }
     }
     public Vector2 Position

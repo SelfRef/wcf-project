@@ -156,7 +156,7 @@ namespace GameWindow.Objects
         }
         else if (ob.Key != Players[Name].InsideID)
         {
-          ObjectsObj[ob.Key].UpdatePosition(ob.Value.Position, ob.Value.Angle);
+          //ObjectsObj[ob.Key].UpdatePosition(ob.Value.Position, ob.Value.Angle);
         }
       }
       foreach (var ob in ObjectsObj) if (!Objects.ContainsKey(ob.Key)) objectsToDelete.Add(ob.Key); // Also check for usused objects.
