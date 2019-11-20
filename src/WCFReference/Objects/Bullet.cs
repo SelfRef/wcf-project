@@ -24,6 +24,9 @@ namespace WCFReference.Objects
       Body.BodyType = BodyType.Dynamic;
       Body.IsBullet = true;
       Body.Mass = 0.005f;
+      Body.Restitution = 0.5f;
+      Body.LinearDamping = 1;
+      Body.AngularDamping = 2;
       Body.Rotation = angle;
     }
   }
