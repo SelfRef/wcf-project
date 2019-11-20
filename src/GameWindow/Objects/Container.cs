@@ -67,7 +67,7 @@ namespace GameWindow.Objects
     /// <summary>
     /// Texture of life symbol.
     /// </summary>
-    public Texture2D LifeSymTX { get; set; }
+    public Texture2D[] LifeSymTX { get; set; }
     /// <summary>
     /// Font texture.
     /// </summary>
@@ -127,7 +127,7 @@ namespace GameWindow.Objects
 
       foreach (var pl in Players) // Creating Player game objects based on imported data.
       {
-        if (!PlayersObj.ContainsKey(pl.Key)) PlayersObj.Add(pl.Key, new Pedestrian(World, 10, HumanTS, pl.Value.Position, pl.Value.Angle));
+        if (!PlayersObj.ContainsKey(pl.Key)) PlayersObj.Add(pl.Key, new Pedestrian(World, 10, HumanTS, pl.Value.Position, pl.Value.Angle, LifeSymTX));
         else if (pl.Key != Name)
         {
           PlayersObj[pl.Key].Position = pl.Value.Position; // Update position if object already exist.

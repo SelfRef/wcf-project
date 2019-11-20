@@ -122,10 +122,6 @@
       <Link>Content\Materials\bullet.xnb</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="..\WCFReference\Content\bin\Materials\heart.xnb">
-      <Link>Content\Materials\heart.xnb</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="..\WCFReference\Content\bin\Materials\dots.xnb">
       <Link>Content\Materials\dots.xnb</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -144,6 +140,14 @@
     </None>
     <None Include="..\WCFReference\Content\bin\People\man.xnb">
       <Link>Content\People\man.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\WCFReference\Content\bin\Symbols\heart_full.xnb">
+      <Link>Content\Symbols\heart_full.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\WCFReference\Content\bin\Symbols\heart_empty.xnb">
+      <Link>Content\Symbols\heart_empty.xnb</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="App.config">
