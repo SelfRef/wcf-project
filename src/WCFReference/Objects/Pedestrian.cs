@@ -24,6 +24,7 @@ namespace WCFReference.Objects
       Body.AngularDamping = 20;
       Body.UserData = this;
       Body.CollisionCategories = Category.Cat3;
+      Body.OnCollision += Body_OnCollision;
       sprites = new Timer(300);
       sprites.Elapsed += (s, e) =>
       {
@@ -31,6 +32,16 @@ namespace WCFReference.Objects
         else if (sprite == 1) sprite = 2;
         else if (sprite == 2) sprite = 1;
       };
+    }
+
+    private bool Body_OnCollision(Fixture fixtureA, Fixture fixtureB, FarseerPhysics.Dynamics.Contacts.Contact contact)
+    {
+      var fxData = fixtureB.Body.UserData;
+      if (fxData is Bullet && fixtureB.Body.LinearVelocity.Length() >= 2)
+      {
+        SubtractLife();
+      }
+      return true;
     }
 
     public override void UpdateByPlayer(Control ctrl)

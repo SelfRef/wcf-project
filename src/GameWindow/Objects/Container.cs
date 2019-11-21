@@ -99,12 +99,6 @@ namespace GameWindow.Objects
         var fxACat = fxA.CollisionCategories;
         var fxBCat = fxB.CollisionCategories;
         if (fxACat == Category.Cat2 && fxBCat == Category.Cat2) return false;
-        else if (fxACat == Category.Cat3 && fxBCat == Category.Cat2)
-        {
-          var player = fxA.Body.UserData as Pedestrian;
-          var bullet = fxB.Body.UserData as Bullet;
-          if (bullet.Owner != player) player.SubtractLife();
-        }
         return true;
       };
       Map = new Map();
@@ -167,9 +161,9 @@ namespace GameWindow.Objects
           }
           ObjectsObj.Add(ob.Key, obj);
         }
-        else if (ob.Key != Players[Name].InsideID)
+        else if (ObjectsObj[ob.Key] is Car && ob.Key != Players[Name].InsideID)
         {
-          //ObjectsObj[ob.Key].UpdatePosition(ob.Value.Position, ob.Value.Angle);
+          ObjectsObj[ob.Key].UpdatePosition(ob.Value.Position, ob.Value.Angle);
         }
       }
       foreach (var ob in ObjectsObj) if (!Objects.ContainsKey(ob.Key)) objectsToDelete.Add(ob.Key); // Also check for usused objects.
