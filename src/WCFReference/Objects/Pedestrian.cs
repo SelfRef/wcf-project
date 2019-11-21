@@ -14,6 +14,7 @@ namespace WCFReference.Objects
     Timer sprites;
     TileSet tileSet;
     Texture2D[] lifeSym;
+    int life = 5;
     int sprite = 0;
     public Pedestrian(World world, float radius, TileSet tileset, Vector2 position, float angle, Texture2D[] lifesym = null) : base(world, BodyFactory.CreateCircle(world, ConvertUnits.ToSimUnits(radius), 1), tileset?.Texture, null, position, angle)
     {
@@ -21,6 +22,8 @@ namespace WCFReference.Objects
       lifeSym = lifesym;
       Body.LinearDamping = 10;
       Body.AngularDamping = 20;
+      Body.UserData = this;
+      Body.CollisionCategories = Category.Cat3;
       sprites = new Timer(300);
       sprites.Elapsed += (s, e) =>
       {
@@ -41,6 +44,11 @@ namespace WCFReference.Objects
       Angle = angle;
     }
 
+    public void SubtractLife()
+    {
+      life--;
+    }
+
     public override void Draw(SpriteBatch spriteBatch, Vector2? velSnap = null)
     {
       Vector2 veloc = velSnap ?? Body.LinearVelocity;
@@ -54,7 +62,10 @@ namespace WCFReference.Objects
       if (lifeSym != null)
       {
         for (int i = 2; i >= -2; i--)
-          spriteBatch.Draw(lifeSym[0], Position - new Vector2(offsetX * i, offsetY), origin: new Vector2(10, 0));
+        {
+          var sym = -life <= (i - 3) ? lifeSym[0] : lifeSym[1];
+          spriteBatch.Draw(sym, Position - new Vector2(offsetX * i, offsetY), origin: new Vector2(10, 0));
+        }
       }
     }
   }

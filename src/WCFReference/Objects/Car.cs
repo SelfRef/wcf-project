@@ -85,13 +85,13 @@ namespace WCFReference.Objects
                 new Wheel(world, wheelTex, wheelSize ?? new Vector2(7, 15), angle),
                 new Wheel(world, wheelTex, wheelSize ?? new Vector2(7, 15), angle)
             };
-      JointFactory.CreateRevoluteJoint(world, Body, Wheels[0].Body, ConvertUnits.ToSimUnits(new Vector2(3, 20)), ConvertUnits.ToSimUnits(Wheels[0].Origin));
-      JointFactory.CreateRevoluteJoint(world, Body, Wheels[1].Body, ConvertUnits.ToSimUnits(new Vector2(Size.X - 3, 20)), ConvertUnits.ToSimUnits(Wheels[1].Origin));
+      JointFactory.CreateRevoluteJoint(world, Body, Wheels[0].Body, ConvertUnits.ToSimUnits(new Vector2(3, 20)), Wheels[0].Body.LocalCenter);
+      JointFactory.CreateRevoluteJoint(world, Body, Wheels[1].Body, ConvertUnits.ToSimUnits(new Vector2(Size.X - 3, 20)), Wheels[1].Body.LocalCenter);
 
-      JointFactory.CreateWeldJoint(world, Body, Wheels[2].Body, ConvertUnits.ToSimUnits(new Vector2(3, Size.Y - 17)), ConvertUnits.ToSimUnits(Wheels[2].Origin));
-      JointFactory.CreateWeldJoint(world, Body, Wheels[3].Body, ConvertUnits.ToSimUnits(new Vector2(Size.X - 3, Size.Y - 17)), ConvertUnits.ToSimUnits(Wheels[3].Origin));
+      JointFactory.CreateWeldJoint(world, Body, Wheels[2].Body, ConvertUnits.ToSimUnits(new Vector2(3, Size.Y - 17)), Wheels[2].Body.LocalCenter);
+      JointFactory.CreateWeldJoint(world, Body, Wheels[3].Body, ConvertUnits.ToSimUnits(new Vector2(Size.X - 3, Size.Y - 17)), Wheels[3].Body.LocalCenter);
 
-      Origin = new Vector2(Origin.X, 20);
+      Body.LocalCenter = ConvertUnits.ToSimUnits(new Vector2(Origin.X, 20));
       Body.Restitution = 0.2f;
       //Body.Mass = 1500;
       //Body.LinearDamping = 1f;
@@ -164,7 +164,7 @@ namespace WCFReference.Objects
         spriteBatch.Draw(i.Texture, null, new Rectangle(i.Position.ToPoint(), i.Size.ToPoint()), null, new Vector2(0.5f, 0.5f), i.Angle, null, Color.Black);
       }
 
-      spriteBatch.Draw(Texture, Position, null, TexRect, Origin, Angle);
+      spriteBatch.Draw(Texture, Position, null, TexRect, ConvertUnits.ToDisplayUnits(Body.LocalCenter), Angle);
     }
   }
 }

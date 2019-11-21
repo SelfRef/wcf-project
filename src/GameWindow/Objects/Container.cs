@@ -96,7 +96,16 @@ namespace GameWindow.Objects
       World = new World(Vector2.Zero);
       World.ContactManager.ContactFilter = (Fixture fxA, Fixture fxB) =>
       {
-        return !(fxA.CollisionCategories == Category.Cat2 && fxB.CollisionCategories == Category.Cat2);
+        var fxACat = fxA.CollisionCategories;
+        var fxBCat = fxB.CollisionCategories;
+        if (fxACat == Category.Cat2 && fxBCat == Category.Cat2) return false;
+        else if (fxACat == Category.Cat3 && fxBCat == Category.Cat2)
+        {
+          var player = fxA.Body.UserData as Pedestrian;
+          var bullet = fxB.Body.UserData as Bullet;
+          if (bullet.Owner != player) player.SubtractLife();
+        }
+        return true;
       };
       Map = new Map();
       PlayersObj = new Dictionary<string, GameObject>();
@@ -188,7 +197,7 @@ namespace GameWindow.Objects
             if (!bulletStopwatch.IsRunning || bulletStopwatch.ElapsedMilliseconds > 500)
             {
               var pos = PlayerObj.Position + MathUtils.Mul(new Rot(PlayerObj.Angle), new Vector2(5, -20));
-              var bullet = new Bullet(World, BulletTX, pos, PlayerObj.Angle);
+              var bullet = new Bullet(World, BulletTX, pos, PlayerObj.Angle, PlayerObj as Pedestrian);
               Random rm = new Random();
               int key = rm.Next();
               Debug.WriteLine("Random: " + key);
