@@ -3,7 +3,7 @@ create_date: 2015-06
 archive_date: 2019-11
 language: C#
 framework: [.NET Framework 4.5, WCF, MonoGame]
-editor: Visual Studio Community 2015+
+editor: Visual Studio Community 2019
 locale: pl_PL
 documentation:
 - Polish: /docs/WCFProject_Documentation_PL.docx
