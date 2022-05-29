@@ -1,39 +1,22 @@
 ---
-code_name: TM-S_WCF-PROJECT_GAM_MON_CSH
 create_date: 2015-06
-obsolete_date: 2016-11
-author: TM
-author_site: timsmanter.net
-editor: Visual Studio Community 2015+
+archive_date: 2019-11
 language: C#
-framework: Mono | MonoGame
+framework: [.NET Framework 4.5, WCF, MonoGame]
+editor: Visual Studio Community 2015+
 locale: pl_PL
 documentation:
-    - Polish: /docs/WCFProject_Documentation_PL.docx
+- Polish: /docs/WCFProject_Documentation_PL.docx
 license: GPLv3
-status: [Dev, Sample]
+category: [PoC, Study, Game, Desktop]
+dev_status: Archive
 ---
 
-# WCFProject - Multiplayer Mono**Game**
+# WCFProject - Multiplayer open-world Mono**Game**
 
-## Overview
+## Description
 
 WCFProject is my provate lab project of creating full-featured game based on .NET WCF communication, MonoGame framework and physics engine. The result is server-client game application with ability to serve multiple client instances.
-
-## Documentation
-
-Full documentation in Polish language is available [here](docs/WCFProject_Documentation_PL.docx) in DOCX format.
-
-## Frameworks and libraries
-
-- Microsoft .NET Framework 4.5;
-- Windows Presentation Foundation (WPF);
-- Windows Communication Foundation (WCF);
-- MonoGame;
-- Farseer Physics Engine (Box2D);
-- Json.NET;
-- TiledSharp;
-- MahApps.Metro;
 
 ## Screenshots
 
@@ -51,16 +34,31 @@ Client 1 | Client 2
 
 ![Console Window](docs/screenshots/console_window2.png)
 
-## Class Diagram
+## Documentation
 
-### WCFReference
+Full documentation in Polish language is available [here](docs/WCFProject_Documentation_PL.docx) in DOCX format.
+
+### Frameworks and libraries
+
+- Microsoft .NET Framework 4.5;
+- Windows Presentation Foundation (WPF);
+- Windows Communication Foundation (WCF);
+- MonoGame;
+- Farseer Physics Engine (Box2D);
+- Json.NET;
+- TiledSharp;
+- MahApps.Metro;
+
+### Class Diagram
+
+#### WCFReference
 
 ![Class Diagram](docs/diagrams/WCFReference_Diagram.png)
 
-### WCFClient
+#### WCFClient
 
 ![Class Diagram](docs/diagrams/WCFClient_Diagram.png)
 
-### WCFReference
+#### WCFReference
 
 ![Class Diagram](docs/diagrams/WCFServer_Diagram.png)
