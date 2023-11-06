@@ -16,7 +16,7 @@ dev_status: Archive
 
 ## Description
 
-WCFProject is my provate lab project of creating full-featured game based on .NET WCF communication, MonoGame framework and physics engine. The result is server-client game application with ability to serve multiple client instances.
+WCFProject is my private lab project that aimed to being a fully-featured game based on .NET WCF communication, MonoGame framework and physics engine. The result is demo-type server-client game application with ability to serve multiple client instances.
 
 ## Screenshots
 
