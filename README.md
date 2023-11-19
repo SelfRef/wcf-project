@@ -6,7 +6,7 @@ framework: [.NET Framework 4.5, WCF, MonoGame]
 editor: Visual Studio Community 2019
 locale: pl_PL
 documentation:
-- Polish: /docs/WCFProject_Documentation_PL.docx
+- Polish: /docs/WCFProject_Documentation_PL.pdf
 license: GPLv3
 category: [PoC, Study, Game, Desktop]
 dev_status: Archive
@@ -36,7 +36,7 @@ Client 1 | Client 2
 
 ## Documentation
 
-Full documentation in Polish language is available [here](docs/WCFProject_Documentation_PL.docx) in DOCX format.
+Full documentation in Polish language is available [here](docs/WCFProject_Documentation_PL.pdf) in PDF format.
 
 ### Frameworks and libraries
 
