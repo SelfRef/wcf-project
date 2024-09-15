@@ -12,7 +12,7 @@ category: [PoC, Study, Game, Desktop]
 dev_status: Archive
 ---
 
-# WCFProject - Multiplayer open-world Mono**Game**
+# WCFProject
 
 ## Description
 
